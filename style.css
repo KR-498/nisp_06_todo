@@ -9,12 +9,18 @@ body {
 
 /* Stylizacja listy zadań */
 #task-list {
-	list-style-type: none; /* Usuwamy kropki */
+	list-style-type: none;
 	padding: 0;
 	width: 300px;
-	border: 2px solid #ddd; /* Obramowanie listy */
+	border: 2px solid #ddd;
 	border-radius: 8px;
 	background-color: white;
+	margin-top: 15px; /* Dodatkowy odstęp od przycisku */
+}
+
+/* UKRYWANIE PUSTEJ LISTY: */
+#task-list:empty {
+	display: none;
 }
 
 /* Odstępy między elementami listy */
