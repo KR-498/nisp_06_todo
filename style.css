@@ -19,8 +19,10 @@ body {
 
 /* Odstępy między elementami listy */
 #task-list li {
-	padding: 10px;
-	border-bottom: 1px solid #eee;
+	display: flex;
+	align-items: center;
+	justify-content: space-between; /* Rozsuwa tekst i przycisk */
+	padding: 8px;
 }
 
 /* Usuwamy obramowanie ostatniego elementu */
@@ -36,4 +38,16 @@ body {
 /* Opcjonalne: odstęp między checkboxem a tekstem */
 #task-list li input {
 	margin-right: 10px;
+}
+#task-list button {
+	background-color: #ff4d4d;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	padding: 5px 10px;
+}
+
+#task-list button:hover {
+	background-color: #cc0000;
 }
