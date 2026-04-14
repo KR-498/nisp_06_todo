@@ -32,7 +32,9 @@ body {
 
 .completed {
 	text-decoration: line-through;
-	color: gray; /* Opcjonalnie: zmiana koloru na jaśniejszy */
+	color: #2e7d32; /* Ciemniejszy zielony dla tekstu */
+	background-color: #c8e6c9 !important; /* Jasnozielone tło */
+	transition: background-color 0.3s ease; /* Płynne przejście koloru */
 }
 
 /* Opcjonalne: odstęp między checkboxem a tekstem */
