@@ -8,22 +8,28 @@ btn.addEventListener("click", () => {
 	if (taskText !== "") {
 		const newLi = document.createElement("li");
 
-		// Tworzenie checkboxa
+		// 1. Dodanie checkboxa (z poprzedniego zadania)
 		const checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
-
-		// Obsługa zmiany stanu checkboxa
 		checkbox.addEventListener("change", () => {
-			if (checkbox.checked) {
-				newLi.classList.add("completed");
-			} else {
-				newLi.classList.remove("completed");
-			}
+			newLi.classList.toggle("completed", checkbox.checked);
 		});
 
-		// Składanie elementu listy
+		// 2. Tworzenie przycisku "Usuń"
+		const deleteBtn = document.createElement("button");
+		deleteBtn.textContent = "Usuń";
+		deleteBtn.style.marginLeft = "10px"; // Szybki odstęp
+
+		// Obsługa usuwania elementu
+		deleteBtn.addEventListener("click", () => {
+			newLi.remove();
+		});
+
+		// 3. Składanie elementu li
 		newLi.appendChild(checkbox);
-		newLi.append(` ${taskText}`); // Dodanie tekstu obok checkboxa
+		newLi.append(` ${taskText} `);
+		newLi.appendChild(deleteBtn);
+
 		list.appendChild(newLi);
 
 		input.value = "";
