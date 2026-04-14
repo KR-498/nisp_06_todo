@@ -1,0 +1,29 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f9;
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Wyśrodkowanie zawartości */
+	padding: 20px;
+}
+
+/* Stylizacja listy zadań */
+#task-list {
+	list-style-type: none; /* Usuwamy kropki */
+	padding: 0;
+	width: 300px;
+	border: 2px solid #ddd; /* Obramowanie listy */
+	border-radius: 8px;
+	background-color: white;
+}
+
+/* Odstępy między elementami listy */
+#task-list li {
+	padding: 10px;
+	border-bottom: 1px solid #eee;
+}
+
+/* Usuwamy obramowanie ostatniego elementu */
+#task-list li:last-child {
+	border-bottom: none;
+}
